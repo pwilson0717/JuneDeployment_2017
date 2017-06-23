@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Index</title>
+</head>
+<body>
+	<h3>users</h3>
+	<table border="1">
+		<thead>
+			<th>id</th>
+			<th>first_name</th>
+			<th>last_name</th>
+			<th>email</th>
+			<th>password</th>
+			<th>salt</th>
+			<th>created_at</th>
+			<th>updated_at</th>
+		</thead>
+		<tbody>
+			{% for i in users %}
+				<tr>
+					<td>{{ i.id }}</td>
+					<td>{{ i.first_name }}</td>
+					<td>{{ i.last_name }}</td>
+					<td>{{ i.emmail }}</td>
+					<td>{{ i.password }}</td>
+					<td>{{ i.salt }}</td>
+					<td>{{ i.created_at }}</td>
+					<td>{{ i.update_at }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<p><a href="/add_data">Click here to add som data!</a></p>
+	<p><a href="/remove_data">Click here to remove all data!</a></p>
+</body>
+</html>
